@@ -1,0 +1,97 @@
+.container {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+}
+
+.categoryList {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding: 24px;
+  gap: 20px;
+}
+
+/* ---------------------------------- */
+
+.categoryListContainer {
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.categoryListContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* ----- hidden scroll ----- */
+.categoryListContainer::-webkit-scrollbar {
+  width: 10px;
+  height: 0;
+  background-color: transparent;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 157px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(222, 231, 240, 0), #DEE7F0);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ButtonsContainer {
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute; 
+  margin-bottom: 20px; 
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.buttonLeftA,
+.buttonRightB {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  background-color: var(--secondary-300);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  color: var(--white-100);
+  font: var(--h5);
+  opacity: 0.5;
+}
+
+.button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.buttonLeftA {
+  left: 0;
+}
+
+.buttonRightB {
+  right: 0;
+  z-index: 2
+}
